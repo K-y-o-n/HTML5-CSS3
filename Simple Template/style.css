@@ -1,0 +1,415 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+  
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #445161;
+  padding: 25px 0 20px;
+}
+
+.header__product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.header__h1 {
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+
+.header__img {
+  width: 472px;
+  display: block;
+}
+
+.header__ul-li {
+  font-size: 20px;
+}
+
+.header__ul-li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.header__ul-li svg{
+  margin-right: 5px;
+  fill: white;
+}
+
+/* ==================About================== */
+
+.about {
+  padding: 45px 0 50px;
+}
+
+.about__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__text {
+  width: 650px;
+}
+
+.about__header {
+  color: #445161;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.about__p {
+  color: #333333;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.about__p:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.about__video {
+  width: 430px;
+}
+
+/* ==================Pluses================== */
+
+.pluses {
+  background: #F5F5F5;
+  color: #333333;
+  padding: 25px 0 55px;
+}
+
+.pluses__header {
+  color: #445161;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pluses__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pluses__p {
+  width: 49%;
+  padding-left: 43px;
+  position: relative;
+}
+
+.pluses__p:nth-of-type(-n + 4) {
+margin-bottom: 35px;
+}
+
+.pluses__p::before {
+  content: "+";
+  font-size: 40px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #445161;
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  color: white;
+}
+
+/* ==================Screenshots================== */
+
+.screenshots {
+  padding: 25px 0 50px;
+}
+
+.screenshots__title {
+  color: #445161;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.screenshots__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center ;
+}
+
+.screenshots__box {
+  display: flex;
+  width: 47%;
+}
+
+.screenshots__box:nth-of-type(-n + 2){
+  margin-bottom: 30px;
+}
+  
+.screenshots__img {
+  width: 202px;
+  margin-right: 14px;
+  display: block;
+}
+
+.screenshots__header {
+  color: #445161;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.screenshots__p {
+  color: #333333;
+  font-size: 16px;
+}
+
+/* ==================Reviews================== */
+
+.reviews {
+  background: #F5F5F5;
+  padding: 25px 0 40px;
+}
+
+.reviews__header {
+  color: #445161;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.reviews__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.reviews__box {
+  display: flex;
+}
+
+.reviews__box:nth-of-type(-n + 2) {
+  margin-bottom: 22px;
+}
+
+.reviews__photo {
+  width: 66px;
+  height: 66px;
+  display: block;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.reviews__text {
+  font-style: italic;
+  font-size: 14px;
+  background: #EBEBEB;
+  border-radius: 5px;
+  padding: 16px 10px 5px 15px;  
+  position: relative;
+}
+
+.reviews__text::before{
+  content: '';
+  position: absolute;
+  background: #EBEBEB;
+  left: -9px;
+  bottom: 34px;
+  width: 18px;
+  height: 18px;
+  transform: rotate(45deg);
+}
+
+.reviews__p {
+  color: #000000;
+  margin-bottom: 5px;
+  width: 458px;
+}
+
+.reviews__footer {
+  color: #989898;
+}
+
+/* ==================Buy it now================== */
+
+.buy {
+  padding: 45px 0 50px;
+}
+
+.buy__header {
+  font-size: 30px;
+  color: #445161;
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.buy__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.buy__wrapper > div:not(:last-of-type) {
+  margin-right: 45px;
+}
+
+.buy__standart,
+.buy__premium,
+.buy__lux {
+  width: 300px;
+  background: #445161;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.buy__name {
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-top: 13px;
+  margin-bottom: 8px;
+}
+
+.buy__price {
+  padding: 25px 0 16px;
+  background: #FFFFFF;
+  border: 2px solid #445162;
+  font-size: 40px;
+  color: #445162;
+}
+
+.buy__ol {
+  padding: 8px 0 16px 20px;
+  font-size: 14px;
+  color: #FFFFFF;
+  list-style-type: decimal;
+  list-style-position: inside;
+  text-align: start;
+}
+
+.buy__li:not(:last-of-type) {
+  margin-bottom: 14px;
+}
+
+.buy__buttion {
+  padding: 16px 112px 9px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #445161;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* ==================Buy it now================== */
+
+.contacts{
+  background: #445162;
+  padding: 25px 0 0;
+}
+
+.contacts__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.contacts__header {
+  font-size: 30px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 43px;
+}
+
+.contacts__form {
+  width: 503px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 45px;
+}
+
+.contacts__form>*:not(:last-child) {
+  margin-bottom: 18px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.contacts__form-item {
+  padding: 12px 0 7px 12px;
+  font-size: 16px;
+  color: #445162;
+}
+
+.textarea {
+  resize: none;
+}
+
+.contacts_form-button {
+  padding: 12px 50px 7px;
+  width: 143px;
+  font-size: 16px;
+  color: #445162;
+  border: 1px solid;
+  border-radius: 5px;
+  width: 143px;
+  align-self: center;
+  margin-bottom: 48px;
+}
+
+.contacts__info{
+  padding-top: 7px;
+}
+
+.contacts__info-item {
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.contacts__info-item > svg {
+  width: 16px;
+  height: 16px;
+  fill: white;
+  margin-right: 5px;
+}
+
+.contacts__info-item:not(:last-of-type) {
+  margin-bottom: 19px;
+}
+
+.contacts__info-item:nth-child(4n) {
+  margin-bottom: 50px;
+}
+
+.contacts__link {
+  text-decoration: none;
+}
+
+.contacts__link_svg:hover{
+  fill: rgb(109, 247, 67);
+}
+
+.contacts__link_svg {
+  fill: white;
+}
+
+.contacts__footer {
+  padding: 12px 0px;
+  font-size: 12px;
+  color: #445162;
+  letter-spacing: 0.3px;
+  background: #F5F5F5;
+  text-align: center;
+}
