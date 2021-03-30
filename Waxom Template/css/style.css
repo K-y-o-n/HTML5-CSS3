@@ -1,0 +1,349 @@
+@font-face {
+  font-family: Montserrat;
+  src: url('fonts/montserrat-light.eot');
+  src: url('fonts/montserrat-light.eot?#iefix') format('embedded-opentype'),
+       url('fonts/montserrat-light.woff2') format('woff2'),
+       url('fonts/montserrat-light.woff') format('woff'),
+       url('fonts/montserrat-light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url('fonts/montserrat-regular.eot');
+  src: url('fonts/montserrat-regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/montserrat-regular.woff2') format('woff2'),
+       url('fonts/montserrat-regular.woff') format('woff'),
+       url('fonts/montserrat-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('fonts/roboto-regular.eot');
+  src: url('fonts/roboto-regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/roboto-regular.woff2') format('woff2'),
+       url('fonts/roboto-regular.woff') format('woff'),
+       url('fonts/roboto-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url('fonts/raleway-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url('fonts/raleway-semi-bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Montserrat, Arial, sans-serif;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.header {
+  background: #434240 url("../img/bg_header.jpg") no-repeat center center /
+    cover;
+  color: #fff;
+  padding: 40px 0 50px;
+}
+
+.header__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 315px;
+}
+
+.header__logo {
+  fill: #fff;
+}
+
+.header__logo:hover {
+  fill: #c7b299;
+}
+
+.header__navigation-links {
+  display: flex;
+  align-items: center;
+}
+
+.header__navigation-link {
+  text-decoration: none;
+  /* ссылки не наследуют цвет от родителя по умолчанию, так что ставим вручную */
+  color: inherit; 
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: 300;
+}
+
+.header__navigation-link_icon {
+  fill: white;
+}
+
+.header__navigation-link_icon:hover {
+  fill: #c7b299;
+}
+
+.header__navigation-link:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.header__navigation-link_margin {
+  margin-right: 50px !important;
+}
+
+.header__navigation-link:hover {
+  color: #c7b299;
+}
+
+.header__slider {
+  position: relative;
+}
+
+.header__slide {
+  width: 570px;
+  margin: 0 auto 305px;
+  text-align: center;
+}
+
+.header__slide-title {
+  font-family: Raleway, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.header__slide-subtitle {
+  font-family: Raleway, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 52px;
+  margin-bottom: 5px;
+  line-height: 61px;
+}
+
+.header__slide-info {
+  margin-bottom: 40px;
+}
+
+.header__slide-btn {
+  font-family: Roboto, Arial, sans-serif;
+  color: #fff;
+  /* надписи у кнопок в HTML делаем в нижнем регистре а потом увеличиваем в CSS */
+  text-transform: uppercase;
+  background-color: #988574;
+  border-radius: 3px;
+  border: none;
+  padding: 20px 40px;
+}
+
+.header__slide-btn:hover {
+  box-shadow: 0 0 10px rgba(211, 193, 172, 0.5);
+}
+
+.header__slide-btn:focus {
+  outline: none;
+}
+
+.header__slide-nav {
+  border: none;
+  /* цвет бэкграунда прозрачный */
+  background-color: transparent;
+  /* курсор в виде руки */
+  cursor: pointer;
+  position: absolute;
+  top: 60px;
+  fill: #eee;
+}
+
+.header__slide-nav_prev {
+  left: 10%;
+}
+
+.header__slide-nav_next {
+  right: 10%;
+}
+
+.header__slide-nav:hover {
+  fill: #D3C1AC;
+}
+
+.header__slide-nav:focus {
+  /* убирает обводку у стрелочек при клике */
+  outline: none;
+}
+
+.header__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__pagination-item {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.header__pagination-item:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+.header__pagination-item:hover {
+  transform: scaleY(1.5);
+  border: 1px solid #D3C1AD;
+  background-color: transparent;
+  outline: none
+}
+
+.header__pagination-item:focus {
+  transform: scaleY(1.5);
+  border: 1px solid #D3C1AD;
+  background-color: transparent;
+  outline: none
+}
+
+/* =====================Анимация===================== */
+
+.header__slide-title.animate__fadeIn {
+  animation-duration: 2s;
+  animation-delay: 1.5s;
+}
+
+.animate__flipInX {
+  animation-duration: 2s;
+}
+
+.animate__fadeInDown{
+  animation-duration: 2s;
+}
+
+.animate__fadeInRight {
+  animation-duration: 2s;
+}
+
+.animate__fadeInLeft {
+  animation-duration: 2s;
+}
+
+
+/* =====================Services===================== */
+
+.services {
+  display: flex;
+  justify-content: center;
+  padding: 85px 0 90px;
+}
+
+.services__card {
+  text-align: center;
+  width: 25%;
+  /* если указываем ширину в %, так же указываем min-width чтобы элемент не потерял форму при сжатии */
+  max-width: 270px;
+}
+
+.services__card:hover .services__icon {
+  fill: #C7B299;
+}
+
+.services__card:hover .services__title {
+  color: #C7B299;
+}
+
+.services__card:hover::after {
+  background-color: #C7B299;
+}
+
+.services__card:not(:last-of-type) {
+  margin-right: 30px;
+}
+
+.services__card::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color:#F1EEE9;
+  margin: 0 auto;
+}
+
+.services__icon {
+  margin-bottom: 30px;
+  width: 44px;
+  height: 44px;
+  fill: #555555;;
+}
+
+.services__icon_size {
+  margin-bottom: 39px;
+  width: 50px;
+  height: 35px;
+}
+
+.services__title {
+  font-family: Raleway, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #555555;
+  ;
+  margin-bottom: 20px;
+}
+
+.services__info {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+/* =====================Realization===================== */
+
+.realization {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  background: #FBFAF8;
+  padding-top: 80px;
+}
+
+.realization__title {
+  font-family: Raleway, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+.realization__info {
+  font-weight: 300;
+  font-size: 16px;
+  color: #8C8C8C;
+  width: 770px;
+  margin-bottom: 42px;
+}
+
+
+
