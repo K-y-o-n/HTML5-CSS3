@@ -65,7 +65,7 @@ body {
 }
 
 .container {
-  width: 1170px;
+  width: 1240px;
   margin: 0 auto;
 }
 
@@ -207,6 +207,8 @@ body {
 }
 
 .header__pagination-item {
+  /* reset css не убирает паддинги для кнопок, делаем это вручную */
+  padding: 0;
   border: none;
   background-color: rgba(255, 255, 255, 0.5);
   width: 10px;
@@ -219,7 +221,7 @@ body {
 }
 
 .header__pagination-item:hover {
-  transform: scaleY(1.5);
+  transform: scale(1.5);
   border: 1px solid #D3C1AD;
   background-color: transparent;
   outline: none
@@ -495,7 +497,7 @@ body {
 }
 
 .projects__cards-item:hover .projects__cards-desc::before {
-  display: none;
+  background: #352F2D;
 }
 
 .projects__cards-img {
@@ -561,6 +563,7 @@ body {
 
 .presentation__video {
   display: block;
+  width: 100%;
 }
 
 .presentation__box {
@@ -782,6 +785,7 @@ body {
   font-size: 14px;
   color: #C7B299;
   position: relative;
+  text-decoration: none;
 }
 
 .posts__desc-readMore::after {
@@ -858,3 +862,222 @@ body {
   fill: #C7B299;
 }
 
+/* =====================Partners===================== */
+
+.partners {
+  background: #191919 url("../img/bg_partners.jpg") no-repeat center center /
+    cover;
+  padding: 140px 0 140px;
+}
+
+.partners__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners__img {
+  display: block;
+}
+
+.partners__img:not(:last-of-type) {
+  margin-right: 75px;
+}
+
+/* =====================Footer===================== */
+
+.footer {
+  color: white;
+  background: #191919;
+}
+
+.footer__info {
+  padding: 75px 0  128px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__about {
+  margin-right: 65px;
+}
+
+.footer__about-svg {
+  fill: white;
+  margin-bottom: 18px;
+}
+
+.footer__about-text {
+  font-weight: 300;
+  font-size: 14px;
+  color: #555555;
+  width: 270px;
+  margin-bottom: 18px;
+}
+
+.footer__about-readMore {
+  font-size: 14px;
+  color: #D1D1D1;
+  position: relative;
+  text-decoration: none;
+}
+
+.footer__about-readMore::after {
+  content: "";
+  display: inline-block;
+  border: 5px solid transparent; 
+  border-left: 5px solid #D1D1D1;
+  position: absolute;
+  top: 1px;
+  left: 83px;
+}
+
+.footer__posts {
+  margin-right: 49px;
+  margin-top: 32px;
+}
+
+.footer__posts-title {
+  font-family: Raleway, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+}
+
+.footer__posts-post {
+  width: 270px;
+}
+
+.footer__posts-post:not(:last-of-type) {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #242424;
+}
+
+.footer__posts-post:hover .footer__posts-date {
+  color: #FFFFFF;
+}
+
+.footer__posts-post:hover .footer__posts-info {
+  color: #C7B299;
+}
+
+.footer__posts-date {
+  font-weight: 300;
+  font-size: 12px;
+  color: #363636;
+  margin-bottom: 6px;
+}
+
+.footer__posts-info {
+  font-weight: 300;
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 16px;
+}
+
+.footer__twitter {
+  margin-right: 48px;
+  margin-top: 32px;
+}
+
+.footer__twitter-title {
+  font-family: Raleway, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-bottom: 23px;
+}
+
+.footer__twitter-post {
+  width: 270px;
+}
+
+.footer__twitter-post:not(:last-of-type) {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #242424;
+}
+
+.footer__twitter-text {
+  font-weight: 300;
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 6px;
+}
+
+.footer-twitter-text_blue {
+  color: #00BFF3;
+}
+
+.footer__twitter-time {
+  font-weight: 300;
+  font-size: 12px;
+  color: #363636;
+  margin-bottom: 16px;
+}
+
+.footer__twitter-text_gray {
+  color: #757575;
+}
+
+.footer__widget {
+  margin-top: 32px;
+}
+
+.footer__widget-title {
+  font-family: Raleway, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 23px;
+}
+
+.footer__widget-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__widget-img {
+  display: block;
+}
+
+.footer__widget-img:nth-child(-n+2) {
+  margin-bottom: 9px;
+}
+
+.footer__widget-img:nth-child(odd) {
+  margin-right: 8px;
+}
+
+.footer__copyright {
+  background: #101010;
+}
+
+.footer__copyright-wrapper {
+  display: flex;
+  padding: 58px 0 41px;
+  color: #555555;
+}
+
+.footer__copyright-p {
+  font-weight: 300;
+  font-size: 13px; 
+  border-right: 1px solid #1A1A1A;
+  margin-right: 14px;
+  padding-right: 11px;
+}
+
+.footer__copyright-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.footer__copyright-link:hover {
+  color: #BAA78F;
+}
+
+.footer__copyright-link:not(:last-of-type) {
+  border-right: 1px solid #1A1A1A;
+  margin-right: 14px;
+  padding-right: 11px;
+}
